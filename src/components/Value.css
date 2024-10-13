@@ -1,0 +1,148 @@
+.v-container .img-container{
+  border: 8px solid rgba(255,255,255,93%);
+}
+
+.v-container>div{
+  flex: 1;
+}
+
+.v-right{
+  gap: 1rem;
+}
+
+.accordion{
+  margin-top: 2rem;
+  border: none;
+}
+
+.accordionItem{
+  background:rgb(234, 227, 227);
+  border: 8px solid rgba(255,255,255,93%);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.accordionbtn{
+  background: white;
+  padding:1rem ;
+  width: 100%;
+  justify-content: space-between;
+
+cursor: pointer
+;}
+
+.icon{
+  padding: 10px;
+  background: #eeefff;
+  border-radius: 5px;
+}
+
+.icon svg{
+  fill: var(--blue);
+}
+
+.accordionbtn .primaryText{
+  font-size: 1.1rem;
+}
+
+.accordionItem .expanded{
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Accordion Item Hover Effects and Shadows */
+.accordionItem {
+  transition: box-shadow 0.3s ease, transform 0.2s ease; /* Smooth transition effects */
+}
+
+/* Hover Effect for Accordion Items */
+.accordionItem:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Slight shadow effect on hover */
+  transform: translateY(-3px); /* Lift the item slightly on hover */
+}
+
+/* Expanded State for Accordion Items */
+.accordionItem.expanded {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Stronger shadow for expanded state */
+  background-color: #f5f5f5; /* Slightly darker background for emphasis */
+}
+
+/* Hover effect for Accordion Button */
+.accordionbtn:hover {
+  background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+.accordionbtn:focus {
+  outline: none; /* Removes default focus outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a subtle focus ring */
+}
+
+/* Responsive styles for the Value component */
+@media (max-width: 768px) {
+  /* Adjusts the layout for smaller screens */
+  .v-wrapper {
+    padding: 1rem;
+  }
+
+  .v-container {
+    flex-direction: column; /* Stacks the content vertically */
+  }
+
+  .v-left, .v-right {
+    width: 100%; /* Ensures full-width sections */
+  }
+
+  .v-left .img-container {
+    margin-bottom: 1rem; /* Adds spacing between the image and the text on small screens */
+    max-width: 80%;
+    margin: 0 auto; /* Centers the image */
+  }
+
+  /* Adjust accordion item layout */
+  .accordionbtn {
+    padding: 0.8rem; /* Reduces padding for smaller screens */
+  }
+
+  .accordionbtn .primaryText {
+    font-size: 1rem; /* Adjusts text size for better readability */
+  }
+
+  .accordionItem {
+    margin-bottom: 15px; /* Reduces margin between items */
+  }
+
+  /* Adjust icon size for smaller screens */
+  .icon {
+    padding: 8px; /* Smaller padding for icons */
+  }
+
+  .icon svg {
+    width: 18px;
+    height: 18px; /* Adjusts icon size */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .v-wrapper {
+    padding: 0.5rem; /* Reduced padding for extra-small screens */
+  }
+
+  .accordionbtn .primaryText {
+    font-size: 0.9rem; /* Further text size adjustment */
+  }
+
+  .v-left .img-container {
+    max-width: 90%; /* Makes the image slightly larger */
+  }
+
+  .accordionItem {
+    margin-bottom: 10px; /* Reduces spacing between accordion items */
+  }
+
+  .accordionItem.expanded {
+    box-shadow: none; /* Removes shadow effect for better visibility */
+  }
+}
+
+

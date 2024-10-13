@@ -1,0 +1,122 @@
+.c-container{
+  justify-content: space-between;
+}
+
+.c-container>div{
+  flex: 1;
+}
+
+.c-right{
+  width: 100%;
+}
+
+.c-left{
+  gap: 0.5rem;
+}
+
+.contactMods{
+  gap: 1rem;
+  margin-top: 2rem;
+  ;
+}
+
+.contactMods .row{
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.mod{
+  width: 16rem;
+  padding: 1rem;
+  border: 0.8px solid rgba(128,128,128,0.15);
+  gap: 1rem;
+  transition: all 300ms ease-in;
+  border-radius: 0.5rem;
+}
+
+.mod:hover{
+  scale: 1.1;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.mod .button{
+  width: 100%;
+  background: var(--lightBlue);
+  color: var(--blue);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.mod>:nth-child(1){
+  width: 100%;
+  gap: 1.6rem;
+}
+
+.mod .button:hover{
+  background: var(--blue);
+  color: white;
+}
+
+
+/* Responsive styles for the Contact component */
+@media (max-width: 768px) {
+  /* Adjust the layout for tablets and smaller screens */
+  .c-container {
+    flex-direction: column; /* Stack the left and right sections vertically */
+    align-items: center; /* Center align the content */
+    gap: 2rem; /* Add some spacing between sections */
+  }
+
+  .c-left, .c-right {
+    width: 100%; /* Make both sides full-width */
+  }
+
+  .contactMods {
+    gap: 1rem; /* Reduce spacing between contact options */
+  }
+
+  .contactMods .row {
+    gap: 1rem; /* Reduce the gap in the rows for a compact layout */
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .mod {
+    width: 90%; /* Set width to adapt within the screen */
+    padding: 1rem; /* Keep padding consistent */
+  }
+
+  .mod .button {
+    padding: 0.5rem; /* Adjust button padding for smaller screens */
+    font-size: 0.9rem; /* Reduce font size for better fit */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for mobile devices */
+  .c-container {
+    padding: 1rem; /* Add some padding to the outer container */
+  }
+
+  .c-left, .c-right {
+    width: 100%; /* Keep the width at full size */
+  }
+
+  .contactMods {
+    margin-top: 1.5rem; /* Reduce the top margin */
+  }
+
+  .contactMods .row {
+    flex-direction: column; /* Stack each contact module vertically */
+    gap: 1rem; /* Adjust the spacing between rows */
+  }
+
+  .mod {
+    width: 100%; /* Make each module fill the available space */
+    padding: 0.8rem; /* Slightly reduce the padding */
+  }
+
+  .mod .button {
+    font-size: 0.85rem; /* Smaller font size for mobile screens */
+  }
+}

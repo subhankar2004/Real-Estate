@@ -1,0 +1,53 @@
+.f-container{
+  justify-content: space-between;
+}
+
+.f-left{
+  gap: 1rem;
+}
+
+.f-menu{
+  gap: 1.5rem;
+}
+
+.f-menu span:hover{
+  cursor: pointer;
+  color: orange;
+}
+
+/* Responsive styles for the Footer component */
+@media (max-width: 768px) {
+  /* Adjust layout for tablets and smaller screens */
+  .f-container {
+    flex-direction: column; /* Stack the left and right sections vertically */
+    align-items: center; /* Center the content for a balanced look */
+    gap: 2rem; /* Add some spacing between the sections */
+  }
+
+  .f-left, .f-right {
+    width: 100%; /* Make each section take up full width */
+    text-align: center; /* Center-align text for better readability */
+  }
+
+  .f-menu {
+    justify-content: center; /* Center the menu items */
+    gap: 1rem; /* Reduce the gap between menu items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for mobile devices */
+  .f-container {
+    padding: 1rem; /* Add some padding to the outer container */
+  }
+
+  .f-menu {
+    gap: 0.8rem; /* Further reduce the gap between menu items */
+    font-size: 0.9rem; /* Adjust the font size for better fit */
+  }
+
+  .f-left, .f-right {
+    text-align: center; /* Ensure text is centered for mobile devices */
+  }
+}

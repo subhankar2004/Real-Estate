@@ -1,0 +1,85 @@
+.h-wrapper {
+  color: white;
+}
+
+.h-container {
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--secondary);
+  position: relative; /* For positioning the hamburger menu */
+}
+
+.h-menu {
+  gap: 2rem;
+  display: flex; /* Keep menu visible by default */
+}
+
+/* Hamburger menu icon styling */
+.hamburger-icon {
+  display: none; /* Hidden by default for larger screens */
+  cursor: pointer;
+}
+
+/* Responsive Header Styles */
+@media (max-width: 768px) {
+  /* For tablets and smaller devices */
+  .h-container {
+    flex-direction: row; /* Keep items in a row */
+    align-items: center; /* Center the items vertically */
+    text-align: center;
+    gap: 1rem; /* Add spacing between items */
+  }
+
+  .hamburger-icon {
+    display: block; /* Show hamburger icon for smaller screens */
+  }
+
+  .h-menu {
+    flex-direction: column; /* Stack the menu items vertically */
+    gap: 1rem; /* Increase gap between menu items for better spacing */
+    display: none; /* Hide the menu by default */
+    width: 100%; /* Make the menu take full width */
+    background-color: var(--black); /* Optional background color */
+    padding: 1rem;
+    border-radius: 5px; /* Add a border radius for a smoother look */
+    position: absolute; /* Position the menu absolute */
+    top: 100%; /* Position below the header */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+
+  .h-menu.open {
+    display: flex; /* Show the menu when it is open */
+  }
+
+  .h-menu a,
+  .h-menu button {
+    width: 100%; /* Make links and buttons take full width */
+    text-align: center; /* Center the text for better appearance */
+  }
+
+  .h-wrapper {
+    background-color: var(--black); /* Optionally add a background color for better visibility */
+    padding: 1rem; /* Add padding to make the header more spacious */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For mobile devices */
+  .h-container {
+    padding: 0.5rem; /* Reduce padding for a more compact view */
+  }
+
+  .h-menu {
+    gap: 0.75rem; /* Reduce gap between menu items for smaller screens */
+  }
+
+  .h-menu a,
+  .h-menu button {
+    font-size: 0.9rem; /* Adjust font size for better readability on small screens */
+  }
+}
+
+
+

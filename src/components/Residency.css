@@ -1,0 +1,170 @@
+.r-head{
+  margin-bottom: 2rem;
+}
+
+.r-container{
+  gap: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.r-card{
+  
+  gap: 0.6rem;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: max-content;
+  margin: auto;
+  transition: all 300ms ease-in;
+}
+
+.r-card>img{
+  width: 100%;
+  max-width: 15rem;
+}
+
+.r-card>:nth-child(2){
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.r-card>:nth-child(3)
+{
+font-size: 1.5rem;
+}
+
+.r-card>:nth-child(4){
+  font-size: 0.7rem;
+  width: 15rem;
+}
+
+.r-card:hover{
+  scale: 1.025;
+  cursor: pointer;
+  background: linear-gradient(97.05deg, #67686c 3.76%, #2142c3 100%);
+  box-shadow: 0px 23px 21px -8px rgba(136, 160, 255, 0.25);
+}
+
+.swapper-horizontal{
+  overflow: visible;
+}
+
+.swiper-horizontal>.swiper-wrapper>.swiper-slide{
+  border-radius: 10px;
+}
+
+/* Slider button container */
+.r-buttons {
+  position: absolute;
+  top: 95%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 20; /* Ensures that only the buttons are clickable, not the empty space */
+}
+
+.r-buttons button {
+  background-color: #ff8c00; /* Orange color to match the theme */
+  border: none;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  pointer-events: auto; /* Makes the button itself clickable */
+}
+
+.r-buttons button:hover {
+  background-color: #e07a00; /* Slightly darker shade of orange on hover */
+  transform: scale(1.1); /* Slightly increases the size of the button on hover */
+}
+
+.r-buttons button:focus {
+  outline: none; /* Removes the default focus outline */
+}
+
+.r-buttons button:active {
+  transform: scale(0.95); /* Shrinks the button slightly when clicked */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Reduces the shadow when clicked */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .r-buttons button {
+    padding: 8px 12px;
+  }
+}
+
+/* Responsive styles for the Residency component */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .r-card {
+    padding: 0.8rem;
+    gap: 0.5rem;
+    max-width: 12rem;
+  }
+
+  .r-card > img {
+    max-width: 12rem;
+  }
+
+  .r-card > :nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .r-card > :nth-child(3) {
+    font-size: 1.2rem;
+  }
+
+  .r-card > :nth-child(4) {
+    font-size: 0.6rem;
+    width: 12rem;
+  }
+
+  .r-buttons {
+    top: 90%;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .r-card {
+    padding: 0.6rem;
+    gap: 0.4rem;
+    max-width: 10rem;
+  }
+
+  .r-card > img {
+    max-width: 10rem;
+  }
+
+  .r-card > :nth-child(2) {
+    font-size: 0.9rem;
+  }
+
+  .r-card > :nth-child(3) {
+    font-size: 1rem;
+  }
+
+  .r-card > :nth-child(4) {
+    font-size: 0.5rem;
+    width: 10rem;
+  }
+
+  .r-buttons {
+    top: 85%;
+  }
+
+  .r-buttons button {
+    padding: 6px 10px;
+  }
+}
+
+
+
+
+
+
